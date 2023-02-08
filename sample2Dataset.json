@@ -1,0 +1,49 @@
+{
+  "licenses": [{ "name": "", "id": 0, "url": "" }],
+  "info": {
+    "contributor": "",
+    "date_created": "",
+    "description": "",
+    "url": "",
+    "version": "",
+    "year": ""
+  },
+  "categories": [
+    { "id": 2, "name": "oral", "supercategory": "" },
+    { "id": 1, "name": "dental", "supercategory": "" }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "width": 1138,
+      "height": 1097,
+      "file_name": "metahuman_example_image.png",
+      "license": 0,
+      "flickr_url": "",
+      "coco_url": "",
+      "date_captured": 0
+    }
+  ],
+  "annotations": [
+    {
+      "id": 2,
+      "image_id": 1,
+      "category_id": 1,
+      "segmentation": [],
+      "area": 19629.385499999997,
+      "bbox": [458.39, 800.9, 289.05, 67.91],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    },
+    {
+      "id": 1,
+      "image_id": 1,
+      "category_id": 2,
+      "segmentation": [],
+      "area": 62634.48419999997,
+      "bbox": [414.86, 764.33, 395.27, 158.46],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    }
+  ]
+}
