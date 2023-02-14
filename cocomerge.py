@@ -1,14 +1,5 @@
 import json
-import os
-
-#파일 리스트 가져오는 코드
-file_list = os.listdir('./coco_extract_folder')
-
-#json 만 가져오기
-json_list = []
-for i in file_list:
-    if ".json" in i:
-        json_list.append(i)
+import argparse
 
 #json list
 output_json = {
@@ -32,53 +23,77 @@ output_json = {
   ]
 }
 
-# 가져온 json 파일 리스트를 하나씩 불러서 카테고리, 이미지 ,언노테이션등 을 비교 하는 코드 작성.
 
-# 예를 들어
-
-# 비슷한 단어를 모아놓은 배열 a가 있음
-
-a = ['teeth', 'oral','mouse','dental']
-
-image_index = 1
-ch_image_key_to_index = {}
-ol_image_id_to_newid = {}
-
-ann_index = 1
-# ann_key_to_index = {}
 tt = {}
-# trretret
 
-flag_categories = True
-
-for i in json_list:
-    with open(f'./coco_extract_folder/{i}', 'r', encoding='utf-8') as f:
+def run(file1,file2,opt,output):
+    image_index = 1
+    ann_index = 1
+    flag_categories = True
+    # Option File load
+    with open(opt, 'r', encoding='utf-8') as f:
+        a = json.load(f) 
+    # Merge Target First File Load
+    with open(file1, 'r', encoding='utf-8') as f:
         coco_json_temp = json.load(f)
-    
-    for j in coco_json_temp['categories']:
-       if j['name'] in a:
-        j['id']=1
-        j['name']='teeth'
-        for x in output_json['categories']:
-            if j['name']==x["name"]:
-                flag_categories = False
-            
-        if flag_categories:
-            output_json['categories'].append(j)
-        flag_categories = True
+    # Merge Target Second File Load
+    with open(file2, 'r', encoding='utf-8') as f:
+        coco_json_temp1 = json.load(f)
 
-    for j in coco_json_temp['images']:
-        j['id'] = image_index
-        image_index += 1
-        if not j['file_name'] in ch_image_key_to_index.keys():
-            # 변경되는 image index 값을 만듬
-            ch_image_key_to_index[j['file_name']] = image_index
-            ol_image_id_to_newid[j['id']] = j['file_name']
-        output_json['images'].append(j)
-    
-    for j in coco_json_temp['annotations']:
-        j["image_id"] = ch_image_key_to_index[ol_image_id_to_newid[j['image_id']]]
-        output_json["annotations"].append(j)
-    
-with open("output.json", 'w') as f:
-        json.dump(output_json,f)
+    for i in [coco_json_temp,coco_json_temp1]:
+
+        ch_cat_idx = {}
+        ch_cat_name = {}
+        ch_img_idx = {}
+        ch_img_name = {}
+        # Categories
+        for j in i["categories"]:
+            for l in a:
+                if j["name"] in l["candidate_list"]:
+                    ch_cat_idx[j["id"]] = l["merged_category_id"] # Changed Cat Idx List Up
+                    j["id"] = l["merged_category_id"] # Change Cat Idx
+                    j["name"] = l["merged_category_name"] # Change Cat Name
+            for x in output_json['categories']:
+                if j['name']==x["name"]:
+                    flag_categories = False
+                    break
+            if flag_categories:
+                output_json["categories"].append(j)
+
+        # images
+        for j in i["images"]:
+            ch_img_idx[j["id"]] = image_index # Changed Image Idx List Up
+            j["id"] = image_index # Changed Image Idx
+            output_json["images"].append(j)
+            image_index += 1
+
+
+        # annotations
+        for j in i["annotations"]:
+            # Require Check List
+            # Apply Changed Cat, Img Idx
+            # Chack List Up Value (Dict Type)
+            # Cat Key = Category Name
+            # Cat Value = Category Idx
+            # Img Key = Img File name
+            # Img Value = Img Idx
+            j["id"] = ann_index
+            j["image_id"] = ch_img_idx[j["image_id"]]
+            j["category_id"] = ch_cat_idx[j["category_id"]]
+            
+            output_json["annotations"].append(j)
+            ann_index += 1
+
+    with open(output, 'w',encoding='utf-8') as f:
+        json.dump(output_json,f, indent=2)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="TEST ARGTEST")
+    parser.add_argument('--file1', dest="file1", help='Filename (ex : ./coco_extract1.json)')
+    parser.add_argument('--file2', dest="file2", help='Filename (ex : ./coco_extract2.json)')
+    parser.add_argument('--opt', dest="opt", help='Filename (ex : ./merge_option.json)')
+    parser.add_argument('--output', dest="output", help='Filename (ex : ./result.json)', default='result.json')
+    # run('sample1Dataset.json','sample2Dataset.json','options.json','result.json')
+    args = parser.parse_args()
+
+    run(args.file1, args.file2, args.opt, args.output)

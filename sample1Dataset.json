@@ -10,7 +10,7 @@
   },
   "categories": [
     { "id": 1, "name": "dental", "supercategory": "" },
-    { "id": 2, "name": "oral", "supercategory": "" }
+    { "id": 2, "name": "teeth", "supercategory": "" }
   ],
   "images": [
     {

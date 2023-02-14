@@ -1,16 +1,21 @@
 [
   {
     "merged_category_id": 1,
+    "merged_category_name": "mouse",
+    "candidate_list": ["teeth", "oral", "dental"]
+  },
+  {
+    "merged_category_id": 2,
     "merged_category_name": "yellow",
     "candidate_list": ["노란색", "yellow"]
   },
   {
-    "merged_category_id": 2,
+    "merged_category_id": 3,
     "merged_category_name": "red",
     "candidate_list": ["red", "빨간색", "분홍색"]
   },
   {
-    "merged_category_id": 3,
+    "merged_category_id": 4,
     "merged_category_name": "green",
     "candidate_list": ["green", "검은색"]
   }
