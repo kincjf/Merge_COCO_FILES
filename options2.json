@@ -1,0 +1,12 @@
+[
+  {
+    "merged_category_id": 1,
+    "merged_category_name": "blue",
+    "candidate_list": ["blue", "darkblue", "sky"]
+  },
+  {
+    "merged_category_id": 2,
+    "merged_category_name": "black",
+    "candidate_list": ["black", "검은색", "dark"]
+  }
+]

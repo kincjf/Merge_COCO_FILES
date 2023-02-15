@@ -59,6 +59,7 @@ def run(file1,file2,opt,output):
                     break
             if flag_categories:
                 output_json["categories"].append(j)
+            flag_categories = True
 
         # images
         for j in i["images"]:
