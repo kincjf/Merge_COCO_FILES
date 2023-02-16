@@ -56,3 +56,21 @@ python INPUT_JSON.json OUTPU_JSON.json Label1 Label2...
 pytest example코드 참고1: https://github.com/kennethreitz/requests/blob/master/tests/test_help.py
 
 https://www.google.com/search?q=pytest+vs+unittest
+
+
+https://www.google.com/search?q=coco+data+json+image+label+split
+
+https://github.com/akarazniewicz/cocosplit
+
+
+https://docs.voxel51.com/api/fiftyone.core.dataset.html?highlight=merge_samples#fiftyone.core.dataset.Dataset.merge_samples   \
+https://docs.voxel51.com/recipes/merge_datasets.html   \
+fiftyone에 카테고리id라벨 merge기능이 있는지 찾아봤는데, Func을 몇개 이용해서 구현할수는 있으나, 한번설정으로 실행되는 func는 없음 
+
+
+### 구현기능 test용 샘플데이터 다운로드 방법자료
+https://cocodataset.org/#download
+
+https://stackoverflow.com/questions/51100191/how-can-i-download-a-specific-part-of-coco-dataset
+
+https://docs.voxel51.com/tutorials/open_images.html
