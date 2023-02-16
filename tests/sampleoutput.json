@@ -19,6 +19,11 @@
       "id": 1,
       "name": "tree",
       "supercategory": ""
+    },
+    {
+      "id": 2,
+      "name": "chair",
+      "supercategory": ""
     }
   ],
   "images": [

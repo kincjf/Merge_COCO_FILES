@@ -27,6 +27,14 @@ output_json = {
 tt = {}
 
 def run(file1,file2,opt,output):
+    """_summary_
+
+    Args:
+        file1 (_type_): _description_
+        file2 (_type_): _description_
+        opt (_type_): _description_
+        output (_type_): _description_
+    """
     image_index = 1
     ann_index = 1
     flag_categories = True

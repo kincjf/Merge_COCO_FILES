@@ -50,3 +50,9 @@ python INPUT_JSON.json OUTPU_JSON.json Label1 Label2...
 ```
 
 *Note: the script will do the necessary checks as well (duplicate filenames, ....)*
+
+
+## references
+pytest example코드 참고1: https://github.com/kennethreitz/requests/blob/master/tests/test_help.py
+
+https://www.google.com/search?q=pytest+vs+unittest
