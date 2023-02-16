@@ -68,9 +68,13 @@ https://docs.voxel51.com/recipes/merge_datasets.html   \
 fiftyone에 카테고리id라벨 merge기능이 있는지 찾아봤는데, Func을 몇개 이용해서 구현할수는 있으나, 한번설정으로 실행되는 func는 없음 
 
 
-### 구현기능 test용 샘플데이터 다운로드 방법자료
+### 구현기능 test용 샘플데이터세트 준비-다운로드 방법자료
 https://cocodataset.org/#download
 
 https://stackoverflow.com/questions/51100191/how-can-i-download-a-specific-part-of-coco-dataset
 
 https://docs.voxel51.com/tutorials/open_images.html
+
+https://docs.voxel51.com/user_guide/dataset_zoo/datasets.html#dataset-zoo-coco-2017
+
+https://cocodataset.org/#explore
