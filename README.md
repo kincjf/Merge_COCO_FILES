@@ -20,6 +20,10 @@ Simply:
 python cocomerge.py --file1 ./coco_extract1.json --file2 ./coco_extract2.json --opt ./merge_option.json --output ./result.json
 ```
 
+```cmd
+python cocomerge.py --file1 .\tests\labels15.json --file2 .\tests\labels13.json --opt .\tests\options1.json --output .\tests\instances_test123.json
+```
+
 Json1 and Json2 are the two COCO files to be merged.
 
 OUTPU_JSON is the output file for the combined results
@@ -68,6 +72,8 @@ https://docs.voxel51.com/recipes/merge_datasets.html \
 fiftyone에 카테고리id라벨 merge기능이 있는지 찾아봤는데, Func을 몇개 이용해서 구현할수는 있으나, 한번설정으로 실행되는 func는 없음
 
 ### 구현기능 test용 샘플데이터세트 준비-다운로드 방법자료
+
+https://www.notion.so/epicmoble/sampledataset-merge-3-695d316029444da1b696e330ca7c14c4?pvs=4
 
 https://cocodataset.org/#download
 

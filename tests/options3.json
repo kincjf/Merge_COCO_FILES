@@ -1,0 +1,19 @@
+[
+  {
+    "merged_category_id": 1,
+    "merged_category_name": "cavity",
+    "candidate_list": [
+      "backpack",
+      "bicycle",
+      "bus",
+      "car",
+      "clock",
+      "handbag",
+      "motorcycle",
+      "person",
+      "traffic light",
+      "truck",
+      "train"
+    ]
+  }
+]
