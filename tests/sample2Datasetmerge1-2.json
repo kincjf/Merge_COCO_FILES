@@ -1,0 +1,180 @@
+{
+  "licenses": [{ "name": "", "id": 0, "url": "" }],
+  "info": {
+    "contributor": "",
+    "date_created": "",
+    "description": "",
+    "url": "",
+    "version": "",
+    "year": ""
+  },
+  "categories": [
+    { "id": 1, "name": "chair", "supercategory": "" },
+    { "id": 2, "name": "mountain", "supercategory": "" },
+    { "id": 3, "name": "boat", "supercategory": "" }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "width": 252,
+      "height": 200,
+      "file_name": "dataset6.jpg",
+      "license": 0,
+      "flickr_url": "",
+      "coco_url": "",
+      "date_captured": 0
+    },
+    {
+      "id": 2,
+      "width": 275,
+      "height": 183,
+      "file_name": "dataset7.jpg",
+      "license": 0,
+      "flickr_url": "",
+      "coco_url": "",
+      "date_captured": 0
+    },
+    {
+      "id": 3,
+      "width": 275,
+      "height": 183,
+      "file_name": "dataset8.jpg",
+      "license": 0,
+      "flickr_url": "",
+      "coco_url": "",
+      "date_captured": 0
+    },
+    {
+      "id": 4,
+      "width": 290,
+      "height": 174,
+      "file_name": "dataset11.jpg",
+      "license": 0,
+      "flickr_url": "",
+      "coco_url": "",
+      "date_captured": 0
+    },
+    {
+      "id": 5,
+      "width": 266,
+      "height": 190,
+      "file_name": "dataset12.jpg",
+      "license": 0,
+      "flickr_url": "",
+      "coco_url": "",
+      "date_captured": 0
+    },
+    {
+      "id": 6,
+      "width": 279,
+      "height": 181,
+      "file_name": "dataset13.jpg",
+      "license": 0,
+      "flickr_url": "",
+      "coco_url": "",
+      "date_captured": 0
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1,
+      "image_id": 1,
+      "category_id": 2,
+      "segmentation": [],
+      "area": 939.7836000000001,
+      "bbox": [23.81, 83.75, 39.06, 24.06],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    },
+    {
+      "id": 2,
+      "image_id": 1,
+      "category_id": 1,
+      "segmentation": [],
+      "area": 3812.5,
+      "bbox": [16.0, 116.87, 76.25, 50.0],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    },
+    {
+      "id": 3,
+      "image_id": 2,
+      "category_id": 2,
+      "segmentation": [],
+      "area": 3529.7638000000006,
+      "bbox": [0.52, 64.96, 104.99, 33.62],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    },
+    {
+      "id": 4,
+      "image_id": 2,
+      "category_id": 1,
+      "segmentation": [],
+      "area": 633.3328000000001,
+      "bbox": [208.13, 97.22, 44.32, 14.29],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    },
+    {
+      "id": 5,
+      "image_id": 3,
+      "category_id": 3,
+      "segmentation": [],
+      "area": 453.46560000000005,
+      "bbox": [150.66, 110.66, 33.74, 13.44],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    },
+    {
+      "id": 6,
+      "image_id": 3,
+      "category_id": 2,
+      "segmentation": [],
+      "area": 1840.374,
+      "bbox": [70.88, 32.02, 53.19, 34.6],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    },
+    {
+      "id": 7,
+      "image_id": 5,
+      "category_id": 1,
+      "segmentation": [],
+      "area": 490.77,
+      "bbox": [211.96, 84.89, 19.0, 25.83],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    },
+    {
+      "id": 8,
+      "image_id": 5,
+      "category_id": 2,
+      "segmentation": [],
+      "area": 3092.5568999999996,
+      "bbox": [92.91, 56.99, 98.27, 31.47],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    },
+    {
+      "id": 9,
+      "image_id": 6,
+      "category_id": 2,
+      "segmentation": [],
+      "area": 3887.7894999999994,
+      "bbox": [183.61, 17.54, 63.35, 61.37],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    },
+    {
+      "id": 10,
+      "image_id": 6,
+      "category_id": 1,
+      "segmentation": [],
+      "area": 204.01600000000002,
+      "bbox": [64.83, 127.84, 16.4, 12.44],
+      "iscrowd": 0,
+      "attributes": { "occluded": false, "rotation": 0.0 }
+    }
+  ]
+}

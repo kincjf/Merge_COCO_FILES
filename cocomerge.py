@@ -94,7 +94,7 @@ def run(file1,file2,opt,output):
             ann_index += 1
 
     with open(output, 'w',encoding='utf-8') as f:
-        json.dump(output_json,f, indent=2)
+        json.dump(output_json,f)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="TEST ARGTEST")

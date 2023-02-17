@@ -1,0 +1,16 @@
+[
+  {
+    "merged_category_id": 1,
+    "merged_category_name": "cavity",
+    "candidate_list": [
+      "tree",
+      "water",
+      "house",
+      "grass",
+      "flower",
+      "chair",
+      "mountain",
+      "boat"
+    ]
+  }
+]
